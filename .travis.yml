@@ -1,17 +1,15 @@
 language: node_js
 node_js:
-- 8.9.4
+  - "6.9"
 
-before_script:
-- npm install -g @angular/cli
-install: npm install
 branches:
   only:
-  - master
-after_script:
-- chmod +x publish-gh-pages.sh && ./publish-gh-pages.sh
+    - master
+before_script:
+  - npm install -g @angular/cli
+script:
+  - ng build --prod
 deploy:
   provider: heroku
-  api_key:
-    secure: AP6yXJPG8491xRd3o9bEiSxEXFRhmOWEZw5Eg7MvYJDSf9HduU9vDxeBgym+XbN6AFX9/KKjLFLjjH4lgCa3lsyHXY/EZbXVUISAD6BJZ3hDblpf0rxFARtRfhwYAKf4EgGN5D3WP0BH7A1YcCuk0JkeSQsRXmS665Qi2Wj3yLQBRCQvyDgREQyG7eHp/bgnEvz10RF2HQYm8XK/WdlsEQ3c7i4+kpk7OQDl9tp2LHEdtRTI4N48DDGc6hfKkuYYsIgb/TNtMUsQmbnLOzW1ZW/kcIjYwOgQ3zqaA1GwW6ntP9vcnoplwwbXxd4YqUAuHSdkq3zUklFflIccygfnwZW0F6yMh168JVHta770bq8SGXKmN5XbdI/BSk94hb5G8c4D33MqH6xNV8GQgRZJKIERpDgMyCGuvzHlhswe/WwOLJZkYioCixfXIfPJkw7RK6aD/SEVkpdCKpwvw07UOSWgA/qMyqDbXVJsRPAndxsE0beDeSF70RgQGs1rVo4RKFxlJfa8Vqo282QAZBEnXV0ZdUmhwPvy7DZy8CyiizRAW0L4sipwzsfx42Srb0Z1eHHFzwtcWLsomCn/CS5SG7DMTogUmzE2zRSVCHywL7QBV4Liayem320YmQEPBfrV4z9+kbujEC9Rsx8fRmgyHMYuSXFhlQOM1DjW5ugydkc=
-  app: hello-world-ang
+  api_key: 828fd708-9607-4fad-909d-0ba9a42f7c85
+  app: devopsexp
