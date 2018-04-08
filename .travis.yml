@@ -1,17 +1,18 @@
 language: node_js
 node_js:
-  - "8.9.4"
-
+- 8.9.4
 branches:
   only:
-    - master
-
+  - master
 before_script:
-  - npm install -g @angular/cli
-
+- npm install -g @angular/cli
 script:
-  - ng build --prod
-
+- ng build --prod
+deploy:
+  provider: heroku
+  api_key:
+    secure: T3verFJC6dSJzP/F3sU0/qRaNNsY62DWEHlfIG/L8H6AV61T14Iw2vtPFjd96ZN2A/w6J2fWqWkSpC6h8IxMVz2HBn4uYgfmUvdLGgF8hobdkbM+zPWtzY6uF2AMQaf9CxHVCApjxk96oLP3iFDuO/g6hUUHUWdv8OCUJ7S4ZX3XJYS/0XPOnn7axetwkXFcIYxHCan2BXWDKKU2XW4BMb0K/A/dXA5TVo2qfgvq0XLR/y7cueYsUzaJTMr5St+rnSU3L/FNJl/PUGIBaHssihej26TX/Y9F95ugwHHLtvXYTrlMxUotlBguQVZdZr4JdRbtX9wVzfYMZ4kYpG85vWdmPj+lOkfSCVfmXyZWsHOwocc86ZZTBXKXoBewYQEcbgErhVT1WZE/E0glRIsNTw2rr2mY7ZZk5jJbC99OXXeo3w/XSpDKjB/sT+jNId4ypN0vBAi70xIufYZQ4kCDSkDn3KgnXRlD6hne/96eqE57QLf5EnZpKVSPCzP4I3zVL82/9ZkRhInj1lVr/NegZFGZ/k+6PHc0p6ePIBQ1X3crEPM3OqiXAzdCM/qRyiCDqSzkYymsk95EUmT/WUJqmc9AyGn3SFzb/ikix4gKTkUAo+DS6AfscUOSLVYcieoW6BKYcv4pNqSCXelZ6dC4XnwjG4o2ffKawV+ffdkHdgQ=
+  app: hello-world-ang
 notifications:
   email:
     on_failure: change
