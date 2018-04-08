@@ -1,15 +1,15 @@
 language: node_js
 node_js:
-- '6.9'
+  - "6.9"
+
 branches:
   only:
-  - master
+    - master
 before_script:
-- npm install -g @angular/cli
+  - npm install -g @angular/cli
 script:
-- ng build --prod
+  - ng build --prod
 deploy:
   provider: heroku
-  api_key:
-    secure: iEzUC561QJTVMKJwTY+md1AbGGAw7Udw9q0XlzS6CUPEActia6jXEfUqrag7dbitbV84dIxEw6Xc/2ABKk21fu4/KdDgc5RnEg5qIpC9zYzx3l7zC7e/kUfVWSpBblv+P0RbjzoxFFIV/PlDQNjYBuRKZd4AtBnGSTyoPLMNcUeOGrJrbiSRBGTPtKZdsywiTB9pjhKps3myozbmJ+/j4GbVNfGS2JBzQHRN3oPVEFedx4f6z/1n2XQrQUp8x6PbG9MjkBHms2a/S4b7YztRTWvsBeQJ/kbfdVcfOfvjw6iH9WwfervOp05A6Ao0vcD0iKNpjsURYVB/FRihysWmoqGqbnTxTO4+0c+pyJExXI1xl+nH6M3CjI3oWsl4rSI76dtK2MUC+aI1ZSoOpdHZNX/22SJOPtIeGXYiQV0NmNXOMEQD9DBYDCLIQPouEhx5YcdDE0wCDnyMk7LRionkUgkJnsnwudDgks6vYpLuzbn9nbexCBgMik+50wwbCE1Jn+I9u/qi/PpnmaGXFMqGTyS4GEW9SWMTIehZ4yNexAsGsDIOxXYu761b9Ok4KCdGqrd4r6MQ7QNG+vdT4wkeWjvVkwqH4gvpUG82H4lmzbmRi3OQg+sENz6BBetV2zKT+fQFBN0SvT7bXUlnJu0Z38bYSUPTNUZAOdROLOUQEag=
+  api_key: 828fd708-9607-4fad-909d-0ba9a42f7c85
   app: hello-world-ang
